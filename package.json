@@ -1,6 +1,6 @@
 {
-  "name": "modbus-herdsman-converters",
-  "version": "1.0.0",
+  "name": "@instathings/modbus-herdsman-converters",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
