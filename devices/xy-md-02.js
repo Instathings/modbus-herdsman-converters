@@ -4,33 +4,37 @@
 module.exports = {
   model: 'xy-md02',
   vendor: 'Arceli',
-  input: {
-    temperature: {
-      address: 0x0001,
-      post: (value) => value / 10,
+  description: 'Temperature and humidity sensor',
+  fromModbus: {
+    input: {
+      temperature: {
+        address: 0x0001,
+        post: (value) => value / 10,
+      },
+      humidity: {
+        address: 0x0002,
+        post: (value) => value / 10,
+      },
     },
-    humidity: {
-      address: 0x0002,
-      post: (value) => value / 10,
+    keep: {
+      address: {
+        address: 0x0101,
+      },
+      rate: {
+        /**
+         * 0 9600
+         * 1 14400
+         * 2 192000
+         */
+        address: 0x102,
+      },
+      temperature_correction: {
+        address: 0x103,
+      },
+      humidity_correction: {
+        address: 0x104,
+      },
     },
   },
-  keep: {
-    address: {
-      address: 0x0101,
-    },
-    rate: {
-      /**
-       * 0 9600
-       * 1 14400
-       * 2 192000
-       */
-      address: 0x102,
-    },
-    temperature_correction: {
-      address: 0x103,
-    },
-    humidity_correction: {
-      address: 0x104,
-    },
-  },
+  toModbus: {},
 };
