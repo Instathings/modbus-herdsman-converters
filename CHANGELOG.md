@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.2] - 2020-04-15
+### Changed
+- Uppercase model
+
 ## [2.0.1] - 2020-04-15
 ### Added
 - `supports` key
