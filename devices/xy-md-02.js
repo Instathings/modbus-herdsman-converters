@@ -2,7 +2,7 @@
  * http://www.sah.co.rs/media/sah/techdocs/xy-md02-manual.pdf
  */
 module.exports = {
-  model: 'xy-md02',
+  model: 'XY-MD02',
   vendor: 'Arceli',
   supports: 'temperature and humidity',
   description: 'Temperature and humidity sensor',
