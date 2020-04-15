@@ -4,6 +4,7 @@
 module.exports = {
   model: 'xy-md02',
   vendor: 'Arceli',
+  supports: 'temperature and humidity',
   description: 'Temperature and humidity sensor',
   fromModbus: {
     input: {
