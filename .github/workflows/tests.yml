@@ -1,4 +1,4 @@
-name: CI
+name: tests
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
