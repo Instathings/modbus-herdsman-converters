@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2020-04-17
+### Added
+- Test to verify devices integrity
+- Eastron SDM120 device
+- Contribute docs
+
 ## [2.0.2] - 2020-04-15
 ### Changed
 - Uppercase model
