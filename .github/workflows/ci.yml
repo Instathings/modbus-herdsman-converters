@@ -1,4 +1,4 @@
-name: Greet Everyone
+name: CI
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
@@ -11,7 +11,7 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
-            
+
       - name: Install dependencies
         run: npm i
 

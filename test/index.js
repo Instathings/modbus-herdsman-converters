@@ -5,7 +5,7 @@ const index = require('../index');
 
 describe('index.js', () => {
   it('Find device by model ID', () => {
-    const model = 'XY-MD02';
+    const model = 'xy-md02';
     const device = index.findByModbusModel(model);
     assert.strictEqual(device.model, model);
   });
