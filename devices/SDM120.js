@@ -1,8 +1,8 @@
 module.exports = {
   model: 'SDM120',
   vendor: 'Eastron',
-  supports: 'voltage, current, power',
   description: 'Energy meter',
+  supports: 'voltage, current, power',
   fromModbus: {
     input: {
       voltage: {
