@@ -3,7 +3,7 @@
 
 Collection of device converters to be used with [modbus2mqtt](https://github.com/Instathings/modbus2mqtt).
 
-## Contribute
+## Contribute
 
 Add an entry to `devices.js`. 
 Every device can be described with the following structure:
