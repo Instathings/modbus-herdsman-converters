@@ -8,6 +8,7 @@ module.exports = {
     model: 'HYD6000',
     vendor: 'ZCS',
     description: 'Storage inverter',
+    supports: 'voltage, current, power',
     fromModbus: {
         input: {
             operating_status: {
