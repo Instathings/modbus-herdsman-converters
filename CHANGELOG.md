@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Zucchetti ZCS_HYD600 device 
+
 ## [2.0.3] - 2020-04-17
 ### Added
 - Test to verify devices integrity
