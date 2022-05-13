@@ -10,7 +10,7 @@ module.exports = {
   description: 'Storage inverter',
   supports: 'voltage, current, power',
   fromModbus: {
-    input: {
+    keep: {
       operating_status: {
         address: 0x0200,
       },
@@ -222,7 +222,7 @@ module.exports = {
         post: centesimalDivider,
       },
     },
-    keep: {
+    input: {
     },
   },
   toModbus: {},

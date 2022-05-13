@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.5] - 2022-05-13
+### Changed
+- Fixed inverted registers for device ZCS_HYD600 
+
+## [2.0.4] - 2022-05-10
 ### Added
 - Zucchetti ZCS_HYD600 device 
 
