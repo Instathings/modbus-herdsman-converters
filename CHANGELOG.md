@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [2.0.6] - 2023-01-11
+### Changed
+- Fixed sign Ca2 calculation for int16 registers
+
 ## [2.0.5] - 2022-05-13
 ### Changed
 - Fixed inverted registers for device ZCS_HYD600 
