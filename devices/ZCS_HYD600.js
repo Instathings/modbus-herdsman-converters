@@ -1,8 +1,27 @@
-const divider = (by) => (value) => value / by;
+function base2(number, leftPad = 16) {
+  return number.toString(2).padStart(leftPad, '0')
+}
+/**
+ * takes an arbitrary number expressed in decimal and converts it
+ * considering the Ca2 inversion bit of the base2 representation
+ */
+function ca2Convertion(number) {
+  const bits = base2(number)
+  const negative = bits[0] === '1';
+  if (!negative) return parseInt(bits, 2);
+  const inverse = bits.split('').map(bit => bit === '0' ? '1': '0').join("")
+  return (parseInt(inverse, 2) + 1) * -1;
+}
+
+const divider = (by, hasSign = false) => (value) => (hasSign ? ca2Convertion(value) : value) / by;
 
 const decimalDivider = divider(10);
 const centesimalDivider = divider(100);
 const millesimalDivider = divider(1000);
+
+const decimalSignDivider = divider(10, true);
+const centesimalSignDivider = divider(100, true);
+const millesimalSignDivider = divider(1000, true);
 
 module.exports = {
   model: 'HYD6000',
@@ -20,7 +39,7 @@ module.exports = {
       },
       phase_current: {
         address: 0x0207,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       grid_frequency: {
         address: 0x020C,
@@ -28,7 +47,7 @@ module.exports = {
       },
       battery_charge_power: {
         address: 0x020D,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       battery_cell: {
         address: 0x020E,
@@ -36,17 +55,18 @@ module.exports = {
       },
       battery_charge_current: {
         address: 0x020F,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       status_of_charge: {
         address: 0x0210,
       },
       battery_temperature: {
         address: 0x0211,
+        post: ca2Convertion
       },
       grid_power: {
         address: 0x0212,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       load_power: {
         address: 0x0213,
@@ -54,7 +74,7 @@ module.exports = {
       },
       energy_storage_power: {
         address: 0x0214,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       pv_power_generation: {
         address: 0x0215,
@@ -161,20 +181,22 @@ module.exports = {
       },
       inverter_internal_temperature: {
         address: 0x0238,
+        post: ca2Convertion
       },
       heat_sink_temperature: {
         address: 0x0239,
+        post: ca2Convertion
       },
       country_standard: {
         address: 0x023A,
       },
       current_dc_component: {
         address: 0x023B,
-        post: millesimalDivider,
+        post: millesimalSignDivider,
       },
       voltage_dc_component: {
         address: 0x023C,
-        post: decimalDivider,
+        post: decimalSignDivider,
       },
       day_generation_time: {
         address: 0x0243,
@@ -203,7 +225,7 @@ module.exports = {
       },
       pv1_current: {
         address: 0x0251,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       pv1_power: {
         address: 0x0252,
@@ -215,7 +237,7 @@ module.exports = {
       },
       pv2_current: {
         address: 0x0254,
-        post: centesimalDivider,
+        post: centesimalSignDivider,
       },
       pv2_power: {
         address: 0x0254,
