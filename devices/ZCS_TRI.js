@@ -1,6 +1,7 @@
 const {
   centesimalDivider,
   decimalDivider,
+  ca2Convertion,
   centesimalSignDivider,
   millesimalSignDivider
 } = require('./modbusInverterMethods');
