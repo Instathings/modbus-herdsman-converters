@@ -1526,7 +1526,7 @@ module.exports = {
        * Unit: kW
        * Accuracy: 0,01
        */
-      pv_generation_total: {
+      pv_generation_today: {
         address: 0x0684,
         count: 2,
       },
