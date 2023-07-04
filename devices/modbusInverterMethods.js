@@ -7,9 +7,10 @@ exports.base2 = function (number, leftPad = 16) {
  */
 exports.ca2Convertion = function (number) {
     const bits = exports.base2(number)
-    console.log(bits)
     const negative = bits[0] === '1';
-    if (!negative) return parseInt(bits, 2);
+    if (!negative) {
+        return parseInt(bits, 2);
+    }
     const inverse = bits.split('').map(bit => bit === '0' ? '1' : '0').join("")
     return (parseInt(inverse, 2) + 1) * -1;
 }
