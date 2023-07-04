@@ -3,7 +3,7 @@ const {
   decimalDivider,
   ca2Convertion,
   centesimalSignDivider,
-  millesimalSignDivider
+  millesimalSignDivider,
 } = require('./modbusInverterMethods');
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
        */
       frequency_grid: {
         address: 0x0484,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -27,7 +27,7 @@ module.exports = {
        */
       activepower_output_total: {
         address: 0x0485,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -35,7 +35,7 @@ module.exports = {
        */
       reactivepower_output_total: {
         address: 0x0486,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -43,7 +43,7 @@ module.exports = {
        */
       apparentpower_output_total: {
         address: 0x0487,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -51,7 +51,7 @@ module.exports = {
        */
       activepower_pcc_total: {
         address: 0x0488,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -59,7 +59,7 @@ module.exports = {
        */
       reactivepower_pcc_total: {
         address: 0x0489,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -67,7 +67,7 @@ module.exports = {
        */
       apparentpower_pcc_total: {
         address: 0x048a,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: V
@@ -75,7 +75,7 @@ module.exports = {
        */
       voltage_phase_r: {
         address: 0x048d,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -83,7 +83,7 @@ module.exports = {
        */
       current_output_r: {
         address: 0x048e,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -91,7 +91,7 @@ module.exports = {
        */
       activepower_output_r: {
         address: 0x048f,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -99,7 +99,7 @@ module.exports = {
        */
       reactivepower_output_r: {
         address: 0x0490,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -107,7 +107,7 @@ module.exports = {
        */
       powerfactor_output_r: {
         address: 0x0491,
-        post: millesimalSignDivider
+        post: millesimalSignDivider,
       },
       /**
        * Unit: A
@@ -115,7 +115,7 @@ module.exports = {
        */
       current_pcc_r: {
         address: 0x0492,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -123,7 +123,7 @@ module.exports = {
        */
       activepower_pcc_r: {
         address: 0x0493,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -131,7 +131,7 @@ module.exports = {
        */
       reactivepower_pcc_r: {
         address: 0x0494,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -139,7 +139,7 @@ module.exports = {
        */
       powerfactor_pcc_r: {
         address: 0x0495,
-        post: millesimalSignDivider
+        post: millesimalSignDivider,
       },
       // 0x0496 - skipped
       // 0x0497 - skipped
@@ -149,7 +149,7 @@ module.exports = {
        */
       voltage_phase_s: {
         address: 0x0498,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -157,7 +157,7 @@ module.exports = {
        */
       current_output_s: {
         address: 0x0499,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -165,7 +165,7 @@ module.exports = {
        */
       activepower_output_s: {
         address: 0x049a,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -173,7 +173,7 @@ module.exports = {
        */
       reactivepower_output_s: {
         address: 0x049b,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -181,7 +181,7 @@ module.exports = {
        */
       powerfactor_output_s: {
         address: 0x049c,
-        post: millesimalSignDivider
+        post: millesimalSignDivider,
       },
       /**
        * Unit: A
@@ -189,7 +189,7 @@ module.exports = {
        */
       current_pcc_s: {
         address: 0x049d,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -197,7 +197,7 @@ module.exports = {
        */
       activepower_pcc_s: {
         address: 0x049e,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -205,7 +205,7 @@ module.exports = {
        */
       reactivepower_pcc_s: {
         address: 0x049f,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -213,7 +213,7 @@ module.exports = {
        */
       powerfactor_pcc_s: {
         address: 0x04a0,
-        post: millesimalSignDivider
+        post: millesimalSignDivider,
       },
       // 04a1 - skipped
       // 04a2 - skipped
@@ -223,7 +223,7 @@ module.exports = {
        */
       voltage_phase_t: {
         address: 0x04a3,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -231,7 +231,7 @@ module.exports = {
        */
       current_output_t: {
         address: 0x04a4,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -239,7 +239,7 @@ module.exports = {
        */
       activepower_output_t: {
         address: 0x04a5,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -247,7 +247,7 @@ module.exports = {
        */
       reactivepower_output_t: {
         address: 0x04a6,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -255,7 +255,7 @@ module.exports = {
        */
       powerfactor_output_t: {
         address: 0x04a7,
-        post: millesimalSignDivider
+        post: millesimalSignDivider,
       },
       /**
        * Unit: A
@@ -263,7 +263,7 @@ module.exports = {
        */
       current_pcc_t: {
         address: 0x04a8,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -271,7 +271,7 @@ module.exports = {
        */
       activepower_pcc_t: {
         address: 0x04a9,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -279,7 +279,7 @@ module.exports = {
        */
       reactivepower_pcc_t: {
         address: 0x04aa,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -287,7 +287,7 @@ module.exports = {
        */
       powerfactor_pcc_t: {
         address: 0x04ab,
-        post: millesimalSignDivider
+        post: millesimalSignDivider,
       },
       // 0x04ac - skipped
       // 0x04ad - skipped
@@ -297,7 +297,7 @@ module.exports = {
        */
       activepower_pv_ext: {
         address: 0x04ae,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -305,7 +305,7 @@ module.exports = {
        */
       activepower_load_sys: {
         address: 0x04af,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       // 0x04b0 -> 0x04bf - skipped
       // AC off Grid output
@@ -316,7 +316,7 @@ module.exports = {
        */
       activepower_load_total: {
         address: 0x0504,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -324,7 +324,7 @@ module.exports = {
        */
       reactivepower_load_total: {
         address: 0x0505,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -332,7 +332,7 @@ module.exports = {
        */
       apparentpower_load_total: {
         address: 0x0506,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: Hz
@@ -340,7 +340,7 @@ module.exports = {
        */
       frequency_output: {
         address: 0x0507,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       // 0x508 - skipped
       // 0x509 - skipped
@@ -350,7 +350,7 @@ module.exports = {
        */
       voltage_output_r: {
         address: 0x050a,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -358,7 +358,7 @@ module.exports = {
        */
       current_load_r: {
         address: 0x050b,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -366,7 +366,7 @@ module.exports = {
        */
       activepower_load_r: {
         address: 0x050c,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -374,7 +374,7 @@ module.exports = {
        */
       reactivepower_load_r: {
         address: 0x050d,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kWA
@@ -382,7 +382,7 @@ module.exports = {
        */
       apparentpower_load_r: {
         address: 0x050e,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -390,7 +390,7 @@ module.exports = {
        */
       loadpeakratio_r: {
         address: 0x050f,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       // 0x0510 - skipped
       // 0x0511 - skipped
@@ -400,7 +400,7 @@ module.exports = {
        */
       voltage_output_s: {
         address: 0x0512,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -408,7 +408,7 @@ module.exports = {
        */
       current_load_s: {
         address: 0x0513,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -416,7 +416,7 @@ module.exports = {
        */
       activepower_load_s: {
         address: 0x0514,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -424,7 +424,7 @@ module.exports = {
        */
       reactivepower_load_s: {
         address: 0x0515,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kWA
@@ -432,7 +432,7 @@ module.exports = {
        */
       apparentpower_load_s: {
         address: 0x0516,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -440,7 +440,7 @@ module.exports = {
        */
       loadpeakratio_s: {
         address: 0x0517,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       // 0x0518 - skipped
       // 0x0519 - skipped
@@ -450,7 +450,7 @@ module.exports = {
        */
       voltage_output_t: {
         address: 0x051a,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -458,7 +458,7 @@ module.exports = {
        */
       current_load_t: {
         address: 0x051b,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -466,7 +466,7 @@ module.exports = {
        */
       activepower_load_t: {
         address: 0x051c,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -474,7 +474,7 @@ module.exports = {
        */
       reactivepower_load_t: {
         address: 0x051d,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kWA
@@ -482,7 +482,7 @@ module.exports = {
        */
       apparentpower_load_t: {
         address: 0x051e,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: p.u.
@@ -490,7 +490,7 @@ module.exports = {
        */
       loadpeakratio_t: {
         address: 0x051f,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       // 0x0520 -> 0x053f - skipped
 
@@ -503,7 +503,7 @@ module.exports = {
        */
       voltage_pv1: {
         address: 0x0584,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -511,7 +511,7 @@ module.exports = {
        */
       current_pv1: {
         address: 0x0585,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -519,7 +519,7 @@ module.exports = {
        */
       power_pv1: {
         address: 0x0586,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -527,7 +527,7 @@ module.exports = {
        */
       voltage_pv2: {
         address: 0x0587,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -535,7 +535,7 @@ module.exports = {
        */
       current_pv2: {
         address: 0x0588,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -543,7 +543,7 @@ module.exports = {
        */
       power_pv2: {
         address: 0x0589,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -551,7 +551,7 @@ module.exports = {
        */
       voltage_pv3: {
         address: 0x058a,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -559,7 +559,7 @@ module.exports = {
        */
       current_pv3: {
         address: 0x058b,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -567,7 +567,7 @@ module.exports = {
        */
       power_pv3: {
         address: 0x058c,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -575,7 +575,7 @@ module.exports = {
        */
       voltage_pv4: {
         address: 0x058d,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -583,7 +583,7 @@ module.exports = {
        */
       current_pv4: {
         address: 0x058e,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -591,7 +591,7 @@ module.exports = {
        */
       power_pv4: {
         address: 0x058f,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -599,7 +599,7 @@ module.exports = {
        */
       voltage_pv5: {
         address: 0x0590,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -607,7 +607,7 @@ module.exports = {
        */
       current_pv5: {
         address: 0x0591,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -615,7 +615,7 @@ module.exports = {
        */
       power_pv5: {
         address: 0x0592,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -623,7 +623,7 @@ module.exports = {
        */
       voltage_pv6: {
         address: 0x0593,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -631,7 +631,7 @@ module.exports = {
        */
       current_pv6: {
         address: 0x0594,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -639,7 +639,7 @@ module.exports = {
        */
       power_pv6: {
         address: 0x0595,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -647,7 +647,7 @@ module.exports = {
        */
       voltage_pv7: {
         address: 0x0596,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -655,7 +655,7 @@ module.exports = {
        */
       current_pv7: {
         address: 0x0597,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -663,7 +663,7 @@ module.exports = {
        */
       power_pv7: {
         address: 0x0598,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -671,7 +671,7 @@ module.exports = {
        */
       voltage_pv8: {
         address: 0x0599,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -679,7 +679,7 @@ module.exports = {
        */
       current_pv8: {
         address: 0x059a,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -687,7 +687,7 @@ module.exports = {
        */
       power_pv8: {
         address: 0x059b,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -695,7 +695,7 @@ module.exports = {
        */
       voltage_pv9: {
         address: 0x059c,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -703,7 +703,7 @@ module.exports = {
        */
       current_pv9: {
         address: 0x059d,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -711,7 +711,7 @@ module.exports = {
        */
       power_pv9: {
         address: 0x059e,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -719,7 +719,7 @@ module.exports = {
        */
       voltage_pv10: {
         address: 0x059f,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -727,7 +727,7 @@ module.exports = {
        */
       current_pv10: {
         address: 0x05a0,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -735,7 +735,7 @@ module.exports = {
        */
       power_pv10: {
         address: 0x05a1,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -743,7 +743,7 @@ module.exports = {
        */
       voltage_pv11: {
         address: 0x05a2,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -751,7 +751,7 @@ module.exports = {
        */
       current_pv11: {
         address: 0x05a3,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -759,7 +759,7 @@ module.exports = {
        */
       power_pv11: {
         address: 0x05a4,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -767,7 +767,7 @@ module.exports = {
        */
       voltage_pv12: {
         address: 0x05a5,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -775,7 +775,7 @@ module.exports = {
        */
       current_pv12: {
         address: 0x05a6,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -783,7 +783,7 @@ module.exports = {
        */
       power_pv12: {
         address: 0x05a7,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -791,7 +791,7 @@ module.exports = {
        */
       voltage_pv13: {
         address: 0x05a8,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -799,7 +799,7 @@ module.exports = {
        */
       current_pv13: {
         address: 0x05a9,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -807,7 +807,7 @@ module.exports = {
        */
       power_pv13: {
         address: 0x05aa,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -815,7 +815,7 @@ module.exports = {
        */
       voltage_pv14: {
         address: 0x05ab,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -823,7 +823,7 @@ module.exports = {
        */
       current_pv14: {
         address: 0x05ac,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -831,7 +831,7 @@ module.exports = {
        */
       power_pv14: {
         address: 0x05ad,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -839,7 +839,7 @@ module.exports = {
        */
       voltage_pv15: {
         address: 0x05ae,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -847,7 +847,7 @@ module.exports = {
        */
       current_pv15: {
         address: 0x05af,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -855,7 +855,7 @@ module.exports = {
        */
       power_pv15: {
         address: 0x05b0,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: V
@@ -863,7 +863,7 @@ module.exports = {
        */
       voltage_pv16: {
         address: 0x05b1,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -871,7 +871,7 @@ module.exports = {
        */
       current_pv16: {
         address: 0x05b2,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       /**
        * Unit: kW
@@ -879,7 +879,7 @@ module.exports = {
        */
       power_pv16: {
         address: 0x05b3,
-        post: centesimalDivider
+        post: centesimalDivider,
       },
       // 0x05b5 -> 05f3 - skipped
 
@@ -890,7 +890,7 @@ module.exports = {
        */
       voltage_bat1: {
         address: 0x0604,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -898,7 +898,7 @@ module.exports = {
        */
       current_bat1: {
         address: 0x0605,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -906,7 +906,7 @@ module.exports = {
        */
       power_bat1: {
         address: 0x0606,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -914,28 +914,28 @@ module.exports = {
       */
       temperature_env_bat1: {
         address: 0x0607,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat1: {
-        address: 0x0608
+        address: 0x0608,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat1: {
-        address: 0x0609
+        address: 0x0609,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat1: {
-        address: 0x060a
+        address: 0x060a,
       },
       /**
        * Unit: V
@@ -943,7 +943,7 @@ module.exports = {
        */
       voltage_bat2: {
         address: 0x060b,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -951,7 +951,7 @@ module.exports = {
        */
       current_bat2: {
         address: 0x060c,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -959,7 +959,7 @@ module.exports = {
        */
       power_bat2: {
         address: 0x060d,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -967,28 +967,28 @@ module.exports = {
       */
       temperature_env_bat2: {
         address: 0x060e,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat2: {
-        address: 0x060f
+        address: 0x060f,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat2: {
-        address: 0x0610
+        address: 0x0610,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat2: {
-        address: 0x0611
+        address: 0x0611,
       },
       /**
        * Unit: V
@@ -996,7 +996,7 @@ module.exports = {
        */
       voltage_bat3: {
         address: 0x0612,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1004,7 +1004,7 @@ module.exports = {
        */
       current_bat3: {
         address: 0x0613,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1012,7 +1012,7 @@ module.exports = {
        */
       power_bat3: {
         address: 0x0614,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1020,28 +1020,28 @@ module.exports = {
       */
       temperature_env_bat3: {
         address: 0x0615,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat3: {
-        address: 0x0616
+        address: 0x0616,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat3: {
-        address: 0x0617
+        address: 0x0617,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat3: {
-        address: 0x0618
+        address: 0x0618,
       },
       /**
        * Unit: V
@@ -1049,7 +1049,7 @@ module.exports = {
        */
       voltage_bat4: {
         address: 0x0619,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1057,7 +1057,7 @@ module.exports = {
        */
       current_bat4: {
         address: 0x061a,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1065,7 +1065,7 @@ module.exports = {
        */
       power_bat4: {
         address: 0x061b,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1073,28 +1073,28 @@ module.exports = {
       */
       temperature_env_bat4: {
         address: 0x061c,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat4: {
-        address: 0x061d
+        address: 0x061d,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat4: {
-        address: 0x061e
+        address: 0x061e,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat4: {
-        address: 0x061f
+        address: 0x061f,
       },
       /**
        * Unit: V
@@ -1102,7 +1102,7 @@ module.exports = {
        */
       voltage_bat5: {
         address: 0x0620,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1110,7 +1110,7 @@ module.exports = {
        */
       current_bat5: {
         address: 0x0621,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1118,7 +1118,7 @@ module.exports = {
        */
       power_bat5: {
         address: 0x0622,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1126,28 +1126,28 @@ module.exports = {
       */
       temperature_env_bat5: {
         address: 0x0623,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat5: {
-        address: 0x0624
+        address: 0x0624,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat5: {
-        address: 0x0625
+        address: 0x0625,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat5: {
-        address: 0x0626
+        address: 0x0626,
       },
       /**
        * Unit: V
@@ -1155,7 +1155,7 @@ module.exports = {
        */
       voltage_bat6: {
         address: 0x0627,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1163,7 +1163,7 @@ module.exports = {
        */
       current_bat6: {
         address: 0x0628,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1171,7 +1171,7 @@ module.exports = {
        */
       power_bat6: {
         address: 0x0629,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1179,28 +1179,28 @@ module.exports = {
       */
       temperature_env_bat6: {
         address: 0x062a,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat6: {
-        address: 0x062b
+        address: 0x062b,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat6: {
-        address: 0x062c
+        address: 0x062c,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat6: {
-        address: 0x062d
+        address: 0x062d,
       },
       /**
        * Unit: V
@@ -1208,7 +1208,7 @@ module.exports = {
        */
       voltage_bat7: {
         address: 0x062e,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1216,7 +1216,7 @@ module.exports = {
        */
       current_bat7: {
         address: 0x062f,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1224,7 +1224,7 @@ module.exports = {
        */
       power_bat7: {
         address: 0x0630,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1232,28 +1232,28 @@ module.exports = {
       */
       temperature_env_bat7: {
         address: 0x0631,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat7: {
-        address: 0x0632
+        address: 0x0632,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat7: {
-        address: 0x0633
+        address: 0x0633,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat7: {
-        address: 0x0634
+        address: 0x0634,
       },
       /**
        * Unit: V
@@ -1261,7 +1261,7 @@ module.exports = {
        */
       voltage_bat8: {
         address: 0x0635,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1269,7 +1269,7 @@ module.exports = {
        */
       current_bat8: {
         address: 0x0636,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1277,7 +1277,7 @@ module.exports = {
        */
       power_bat8: {
         address: 0x0637,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1285,28 +1285,28 @@ module.exports = {
       */
       temperature_env_bat8: {
         address: 0x0638,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat8: {
-        address: 0x0639
+        address: 0x0639,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat8: {
-        address: 0x063a
+        address: 0x063a,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat8: {
-        address: 0x063b
+        address: 0x063b,
       },
       /**
        * Unit: V
@@ -1314,7 +1314,7 @@ module.exports = {
        */
       voltage_bat9: {
         address: 0x0644,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1322,7 +1322,7 @@ module.exports = {
        */
       current_bat9: {
         address: 0x0645,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1330,7 +1330,7 @@ module.exports = {
        */
       power_bat9: {
         address: 0x0646,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1338,28 +1338,28 @@ module.exports = {
       */
       temperature_env_bat9: {
         address: 0x0647,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat9: {
-        address: 0x0648
+        address: 0x0648,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat9: {
-        address: 0x0649
+        address: 0x0649,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat9: {
-        address: 0x064a
+        address: 0x064a,
       },
       /**
        * Unit: V
@@ -1367,7 +1367,7 @@ module.exports = {
        */
       voltage_bat10: {
         address: 0x064b,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1375,7 +1375,7 @@ module.exports = {
        */
       current_bat10: {
         address: 0x064c,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1383,7 +1383,7 @@ module.exports = {
        */
       power_bat10: {
         address: 0x064d,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1391,28 +1391,28 @@ module.exports = {
       */
       temperature_env_bat10: {
         address: 0x064e,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat10: {
-        address: 0x064f
+        address: 0x064f,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat10: {
-        address: 0x0650
+        address: 0x0650,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat10: {
-        address: 0x0651
+        address: 0x0651,
       },
       /**
        * Unit: V
@@ -1420,7 +1420,7 @@ module.exports = {
        */
       voltage_bat11: {
         address: 0x0652,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1428,7 +1428,7 @@ module.exports = {
        */
       current_bat11: {
         address: 0x0653,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1436,7 +1436,7 @@ module.exports = {
        */
       power_bat11: {
         address: 0x0654,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1444,28 +1444,28 @@ module.exports = {
       */
       temperature_env_bat11: {
         address: 0x0655,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat11: {
-        address: 0x0656
+        address: 0x0656,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat11: {
-        address: 0x0657
+        address: 0x0657,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat11: {
-        address: 0x0658
+        address: 0x0658,
       },
       /**
        * Unit: V
@@ -1473,7 +1473,7 @@ module.exports = {
        */
       voltage_bat12: {
         address: 0x0659,
-        post: decimalDivider
+        post: decimalDivider,
       },
       /**
        * Unit: A
@@ -1481,7 +1481,7 @@ module.exports = {
        */
       current_bat12: {
         address: 0x065a,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
        * Unit: kW
@@ -1489,7 +1489,7 @@ module.exports = {
        */
       power_bat12: {
         address: 0x065b,
-        post: centesimalSignDivider
+        post: centesimalSignDivider,
       },
       /**
       * Unit: C
@@ -1497,28 +1497,28 @@ module.exports = {
       */
       temperature_env_bat12: {
         address: 0x065c,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soc_bat12: {
-        address: 0x065d
+        address: 0x065d,
       },
       /**
        * Unit: %
        * Accuracy: 1
        */
       soh_bat12: {
-        address: 0x065e
+        address: 0x065e,
       },
       /**
        * Unit: cycle
        * Accuracy: 1
        */
       chargecycle_bat12: {
-        address: 0x065f
+        address: 0x065f,
       },
       // energy statistics
       // 0x680 -> 0x683: skipped
@@ -1619,7 +1619,7 @@ module.exports = {
         count: 2,
       },
       // 0x069c -> 0x06bf: skipped
-    }
+    },
   },
   toModbus: {},
 };
