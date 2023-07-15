@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.7] - 2023-07-15
+### Added
+- Triphase inverter device
 
 ## [2.0.6] - 2023-01-11
 ### Changed
