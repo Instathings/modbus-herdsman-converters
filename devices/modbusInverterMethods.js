@@ -16,7 +16,24 @@ exports.ca2Convertion = function (number) {
   return (parseInt(inverse, 2) + 1) * -1;
 };
 
-exports.divider = (by, hasSign = false) => (value) => (hasSign ? exports.ca2Convertion(value) : value) / by;
+exports.divider = function divider(by, hasSign = false) {
+  return function dividerInternal(value) {
+    const leftSide = hasSign ? exports.ca2Convertion(value) : value;
+    return leftSide / by;
+  };
+};
+
+exports.readInt16BE = function readInt16BE(interpreted, buffer) {
+  return buffer.readInt16BE(0);
+};
+
+exports.readUInt16BE = function readUInt16BE(interpreted, buffer) {
+  return buffer.readUInt16BE(0);
+};
+
+exports.readUInt32BE = function readUInt32BE(interpreted, buffer) {
+  return buffer.readUInt32BE(0);
+};
 
 exports.decimalDivider = exports.divider(10);
 exports.centesimalDivider = exports.divider(100);

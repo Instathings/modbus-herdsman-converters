@@ -1,4 +1,4 @@
-const readUInt16BE = require('../modbusInverterMethods')
+const { readUInt16BE } = require('../modbusInverterMethods');
 
 module.exports = function fault1(interpreted, buffer) {
   const intVal = readUInt16BE(interpreted, buffer);

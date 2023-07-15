@@ -5,12 +5,11 @@ const {
   centesimalSignDivider,
   millesimalSignDivider,
   readUInt32BE,
-  readUInt16BE,
 } = require('./modbusInverterMethods');
 
 const {
   fault1,
-  fault1,
+  fault2,
   fault3,
   fault4,
   fault5,
