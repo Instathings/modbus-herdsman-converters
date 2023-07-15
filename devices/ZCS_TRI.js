@@ -4,7 +4,31 @@ const {
   ca2Convertion,
   centesimalSignDivider,
   millesimalSignDivider,
+  readUInt32BE,
+  readUInt16BE,
 } = require('./modbusInverterMethods');
+
+const {
+  fault1,
+  fault1,
+  fault3,
+  fault4,
+  fault5,
+  fault6,
+  fault7,
+  fault8,
+  fault9,
+  fault10,
+  fault11,
+  fault12,
+  fault13,
+  fault14,
+  fault15,
+  fault16,
+  fault17,
+  fault18,
+  sysState,
+} = require('./zcsTri/faults');
 
 module.exports = {
   model: 'TRI',
@@ -13,6 +37,82 @@ module.exports = {
   supports: 'voltage, current, power',
   fromModbus: {
     keep: {
+      sysstate: {
+        address: 0x0404,
+        post: sysState,
+      },
+      fault1: {
+        address: 0x0405,
+        post: fault1,
+      },
+      fault2: {
+        address: 0x0406,
+        post: fault2,
+      },
+      fault3: {
+        address: 0x0407,
+        post: fault3,
+      },
+      fault4: {
+        address: 0x0408,
+        post: fault4,
+      },
+      fault5: {
+        address: 0x0409,
+        post: fault5,
+      },
+      fault6: {
+        address: 0x040a,
+        post: fault6,
+      },
+      fault7: {
+        address: 0x040B,
+        post: fault7,
+      },
+      fault8: {
+        address: 0x040C,
+        post: fault8,
+      },
+      fault9: {
+        address: 0x040D,
+        post: fault9,
+      },
+      fault10: {
+        address: 0x040E,
+        post: fault10,
+      },
+      fault11: {
+        address: 0x040F,
+        post: fault11,
+      },
+      fault12: {
+        address: 0x0410,
+        post: fault12,
+      },
+      fault13: {
+        address: 0x0411,
+        post: fault13,
+      },
+      fault14: {
+        address: 0x0412,
+        post: fault14,
+      },
+      fault15: {
+        address: 0x0413,
+        post: fault15,
+      },
+      fault16: {
+        address: 0x0414,
+        post: fault16,
+      },
+      fault17: {
+        address: 0x0415,
+        post: fault17,
+      },
+      fault18: {
+        address: 0x0416,
+        post: fault18,
+      },
       /**
        * Unit: Hz
        * Accuracy: 0,01
@@ -24,6 +124,8 @@ module.exports = {
       /**
        * Unit: kW
        * Accuracy: 0,01
+       * en: How much the inverter is providing to loads
+       * it: Quanto l'inverter sta erogando verso i carichi
        */
       activepower_output_total: {
         address: 0x0485,
@@ -48,6 +150,8 @@ module.exports = {
       /**
        * Unit: kW
        * Accuracy: 0,01
+       * en: < 0 getting from grid, > 0 injecting in grid
+       * it: < 0 sto prendendo dalla rete, > 0 immetto in rete
        */
       activepower_pcc_total: {
         address: 0x0488,
@@ -302,6 +406,8 @@ module.exports = {
       /**
        * Unit: kW
        * Accuracy: 0,01
+       * en: total load, instant power taken from the loads
+       * it: totale dei carichi, potenza istantanea assorbita dai carichi
        */
       activepower_load_sys: {
         address: 0x04af,
@@ -903,6 +1009,8 @@ module.exports = {
       /**
        * Unit: kW
        * Accuracy: 0,01
+       * en: < 0 battery is discharging, giving energy to loads
+       * it: < 0 sta fornendo energia al sistema (scaricando)
        */
       power_bat1: {
         address: 0x0606,
@@ -1523,100 +1631,148 @@ module.exports = {
       // energy statistics
       // 0x680 -> 0x683: skipped
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,01
        */
       pv_generation_today: {
         address: 0x0684,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return centesimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,1
        */
       pv_generation_total: {
         address: 0x0686,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return decimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,01
        */
       load_consumption_today: {
         address: 0x0688,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return centesimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,1
        */
       load_consumption_total: {
         address: 0x068a,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return decimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,01
        */
       energy_purchase_today: {
         address: 0x068c,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return centesimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,1
        */
       energy_purchase_total: {
         address: 0x068e,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return decimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,01
        */
       energy_selling_today: {
         address: 0x0690,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return centesimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,1
        */
       energy_selling_total: {
         address: 0x0692,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return decimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,01
        */
       bat_charge_today: {
         address: 0x0694,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return centesimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,1
        */
       bat_charge_total: {
         address: 0x0696,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return decimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,01
        */
       bat_discharge_today: {
         address: 0x0698,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return centesimalDivider(read);
+        },
       },
       /**
-       * Unit: kW
+       * Unit: kWh
        * Accuracy: 0,1
        */
       bat_discharge_total: {
         address: 0x069a,
         count: 2,
+        post: (interpreted, buffer) => {
+          const read = readUInt32BE(interpreted, buffer);
+          return decimalDivider(read);
+        },
       },
       // 0x069c -> 0x06bf: skipped
     },
