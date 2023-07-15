@@ -33,9 +33,7 @@ describe('index.js', () => {
       );
     });
     //  Check for duplicate models
-    const allModels = devices.map((device) => {
-      return device.model;
-    });
+    const allModels = devices.map((device) => device.model);
     const allModelsSet = new Set(allModels);
     if (allModelsSet.size < allModels.length) {
       throw new Error('Duplicate exists');

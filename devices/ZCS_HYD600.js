@@ -4,7 +4,7 @@ const {
   decimalSignDivider,
   ca2Convertion,
   centesimalSignDivider,
-  millesimalSignDivider
+  millesimalSignDivider,
 } = require('./modbusInverterMethods');
 
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
       },
       battery_temperature: {
         address: 0x0211,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       grid_power: {
         address: 0x0212,
@@ -165,11 +165,11 @@ module.exports = {
       },
       inverter_internal_temperature: {
         address: 0x0238,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       heat_sink_temperature: {
         address: 0x0239,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       country_standard: {
         address: 0x023A,
