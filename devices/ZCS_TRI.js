@@ -1775,6 +1775,7 @@ module.exports = {
       },
       // 0x069c -> 0x06bf: skipped
     },
+    input: {},
   },
   toModbus: {},
 };
