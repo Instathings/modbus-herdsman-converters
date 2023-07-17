@@ -1,27 +1,11 @@
-function base2(number, leftPad = 16) {
-  return number.toString(2).padStart(leftPad, '0')
-}
-/**
- * takes an arbitrary number expressed in decimal and converts it
- * considering the Ca2 inversion bit of the base2 representation
- */
-function ca2Convertion(number) {
-  const bits = base2(number)
-  const negative = bits[0] === '1';
-  if (!negative) return parseInt(bits, 2);
-  const inverse = bits.split('').map(bit => bit === '0' ? '1': '0').join("")
-  return (parseInt(inverse, 2) + 1) * -1;
-}
-
-const divider = (by, hasSign = false) => (value) => (hasSign ? ca2Convertion(value) : value) / by;
-
-const decimalDivider = divider(10);
-const centesimalDivider = divider(100);
-const millesimalDivider = divider(1000);
-
-const decimalSignDivider = divider(10, true);
-const centesimalSignDivider = divider(100, true);
-const millesimalSignDivider = divider(1000, true);
+const {
+  centesimalDivider,
+  decimalDivider,
+  decimalSignDivider,
+  ca2Convertion,
+  centesimalSignDivider,
+  millesimalSignDivider,
+} = require('./modbusInverterMethods');
 
 module.exports = {
   model: 'HYD6000',
@@ -62,7 +46,7 @@ module.exports = {
       },
       battery_temperature: {
         address: 0x0211,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       grid_power: {
         address: 0x0212,
@@ -181,11 +165,11 @@ module.exports = {
       },
       inverter_internal_temperature: {
         address: 0x0238,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       heat_sink_temperature: {
         address: 0x0239,
-        post: ca2Convertion
+        post: ca2Convertion,
       },
       country_standard: {
         address: 0x023A,

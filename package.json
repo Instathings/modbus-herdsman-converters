@@ -1,6 +1,6 @@
 {
   "name": "@instathings/modbus-herdsman-converters",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A set of descriptor for converting data coming from Modbus sensors",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/Instathings/modbus-herdsman-converters.git"
   },
-  "keywords": ["modbus", "mqtt"],
+  "keywords": [
+    "modbus",
+    "mqtt"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
